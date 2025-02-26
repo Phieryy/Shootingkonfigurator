@@ -1,84 +1,87 @@
 /* Allgemeine Formatierungen */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-/* Hintergrundfarbe der Seite und Schriftfarbe */
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-} 
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
 .container {
-    background-color: white;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    max-width: 600px;
-} 
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin-left: 20px; /* Abstände von links */
+}
+
+h1, h2, h3, h4 {
+    color: #333;
+}
 
 h1 {
-    text-align: center;
-    margin-bottom: 30px;
-} 
+    text-align: center;
+    margin-bottom: 20px;
+}
 
-/* Stil für die Überschriften der Abschnitte */
 h2 {
-    font-size: 1.2rem;
-    color: #333;
-    margin-bottom: 10px;
-} 
+    text-align: center;
+    margin-bottom: 30px;
+}
 
-/* Allgemeine Formatierungen für den Container von Optionen */
-.option-container {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-} 
+.step {
+    display: none;
+}
 
-/* Hintergrundfarbe für Optionen */
 .option {
-    background-color: #f0f0f4; /* Helles Grau als Hintergrund */
-    padding: 15px;
-    border-radius: 10px; /* Abgerundete Ecken für den Button */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
-    transition: all 0.3s ease; /* Sanfter Übergang bei Hover */
-    cursor: pointer; /* Mauszeiger ändert sich zu einem Hand-Symbol */
-    touch-action: manipulation; /* Verhindert das Standard-Verhalten des Touch-Events */
-} 
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 10px 0;
+  cursor: pointer;
+    transition: 0.3s ease;
+}
 
-/* Hover-Effekt für Optionen */
-.option:hover,
-.option:active,
-.option:focus {
-    background-color: #007BFF; /* Blaue Hintergrundfarbe beim Hover */
-    color: white; /* Weißer Text beim Hover */
-    transform: translateY(-3px); /* Kleine Animation beim Hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
-} 
-
-/* Markierung für die aktuell ausgewählte Option */
-.option.selected {
-    background-color: #007BFF; /* Blaue Farbe für die ausgewählte Option */
-    color: white; /* Weißer Text für die ausgewählte Option */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
-} 
+.option:hover, .option.selected {
+    background-color: #007bff;
+    color: white;
+    transform: scale(1.05);
+}
 
 input[type="radio"] {
-    display: none; /* Radio Buttons verstecken */
-} 
+    display: none;
+}
 
 label {
-    cursor: pointer;
+    cursor: pointer;
+}
+
+#summary-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
 }
