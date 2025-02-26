@@ -9,11 +9,13 @@
 <body>
     <div class="container">
         <h1>Shooting Konfigurator</h1>
-        <h2>Gestalte dein eigenes Traumshooting</h2>
-
+        
+        <!-- Button zum Starten des Konfigurators -->
+        <button id="startButton" onclick="startConfigurator()">Gestalte dein eigenes Traumshooting</button>
+        
         <!-- Step 1: Fahrzeugwahl -->
-        <div id="step-1" class="step">
-            <h3>Step 1: Wähle dein Fahrzeug</h3>
+        <div id="step-1" class="step" style="display:none;">
+            <h3>Step 1: Wähle dein Fahrzeug</h3>
             <div class="option" onclick="selectOption(this, 'vehicle', 'Auto', 100)">
                 <input type="radio" name="vehicle" id="auto">
                 <label for="auto">Auto</label>
@@ -24,8 +26,8 @@
             </div>
         </div>
 
-        <!-- Step 2: Medienwahl -->
-        <div id="step-2" class="step">
+        <!-- Step 2: Medienwahl -->
+        <div id="step-2" class="step" style="display:none;">
             <h3>Step 2: Wähle die Medien</h3>
             <div class="option" onclick="selectOption(this, 'media', 'Foto', 50)">
                 <input type="radio" name="media" id="foto">
@@ -39,10 +41,9 @@
                 <input type="radio" name="media" id="beides">
                 <label for="beides">Foto & Video</label>
             </div>
-        </div>
-
+        </div>
         <!-- Step 3: Drohnenaufnahmen -->
-        <div id="step-3" class="step">
+        <div id="step-3" class="step" style="display:none;">
             <h3>Step 3: Möchtest du Drohnenaufnahmen?</h3>
             <div class="option" onclick="selectOption(this, 'drone', 'Ja', 75)">
                 <input type="radio" name="drone" id="drone-ja">
@@ -55,7 +56,7 @@
         </div>
 
         <!-- Step 4: Weitere Optionen -->
-        <div id="step-4" class="step">
+        <div id="step-4" class="step" style="display:none;">
             <h3>Step 4: Weitere Optionen</h3>
             <div id="foto-options" style="display:none;">
                 <h4>Fotooptionen</h4>
@@ -86,14 +87,14 @@
                 <div class="option" onclick="selectOption(this, 'videoType', 'Standaufnahmen', 80)">
                     <input type="radio" name="videoType" id="standaufnahmen">
                     <label for="standaufnahmen">Standaufnahmen</label>
-                </div>
+                </div>
                 <div class="option" onclick="selectOption(this, 'videoType', 'Fahrvideos', 120)">
                     <input type="radio" name="videoType" id="fahrvideos">
                     <label for="fahrvideos">Fahrvideos</label>
                 </div>
                 <div class="option" onclick="selectOption(this, 'videoType', 'Fahrvideos mit Ton', 150)">
                     <input type="radio" name="videoType" id="fahrvideos-mit-ton">
-                    <label for="fahrvideos-mit-ton">Fahrvideos mit Ton</label>
+                    <label for="fahrvideos-mit-ton">Fahrvideos mit Ton</label>
                 </div>
             </div>
         </div>
