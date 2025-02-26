@@ -39,9 +39,9 @@ function getStepNumber(type) {
             return 4;
         default:
             return 0;
-    
+}
 
-function showNextStep(type) 
+function showNextStep(type) {
     let nextStep;
     switch (type) 
         case 'vehicle':
@@ -62,8 +62,7 @@ function showNextStep(type)
             nextStep = document.getElementById('summary');
             break;
         default:
-            return;
-    
+            return;  
 
     // Verstecke den aktuellen Schritt und zeige den nächsten
     document.querySelector(#step-{getStepNumber(type)}).style.display = 'none';
