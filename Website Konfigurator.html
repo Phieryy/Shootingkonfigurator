@@ -1,0 +1,155 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto-/Videograf Konfigurator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Foto-/Videograf Konfigurator</h1>
+
+        <!-- Schritt 1: Fahrzeugwahl -->
+        <div class="step" id="vehicle-step">
+            <h2>Schritt 1: Fahrzeugwahl</h2>
+            <label>
+                <input type="radio" name="vehicle" value="Auto"> Auto
+            </label>
+            <label>
+                <input type="radio" name="vehicle" value="Motorrad"> Motorrad
+            </label>
+        </div>
+
+        <!-- Schritt 2: Art der Aufnahmen -->
+        <div class="step" id="type-step">
+            <h2>Schritt 2: Art der Aufnahmen</h2
+<label>
+                <input type="checkbox" name="type" value="Fotos"> Fotos
+            </label>
+            <label>
+                <input type="checkbox" name="type" value="Videos"> Videos
+            </label>
+            <label>
+                <input type="checkbox" name="type" value="Beides"> Beides (Fotos + Videos)
+            </label>
+        </div>
+
+        <!-- Schritt 3: Art der Aufnahmen -->
+        <div class="step" id="shooting-step">
+            <h2>Schritt 3: Art der Aufnahmen</h2>
+            <label>
+                <input type="checkbox" name="shooting" value="Drohnenaufnahmen"> Drohnenaufnahmen
+            </label>
+            <label>
+                <input type="checkbox" name="shooting" value="Fahraufnahmen mit Ton"> Fahraufnahmen mit Ton
+            </label>
+            <label>
+                <input type="checkbox" name="shooting" value="Fahraufnahmen ohne Ton"> Fahraufnahmen ohne Ton
+            </label>
+            <label>
+                <input type="checkbox" name="shooting" value="Standaufnahmen"> Standaufnahmen
+            </label>
+        </div>
+
+        <!-- Schritt 4: Anzahl der Locations -->
+        <div class="step" id="locations-step">
+            <h2>Schritt 4: Anzahl der Locations</h2>
+            <label>
+            <input type="radio" name="locations" value="1"> 1 Location
+            </label>
+            <label>
+                <input type="radio" name="locations" value="2"> 2 Locations
+            </label>
+            <label>
+                <input type="radio" name="locations" value="3"> 3 Locations
+            </label>
+            <label>
+                <input type="radio" name="locations" value="Mehr"> Mehr als 3 Locations
+            </label>
+        </div>
+
+        <!-- Schritt 5: Zusätzliche Optionen -->
+        <div class="step" id="options-step">
+            <h2>Schritt 5: Zusätzliche Optionen</h2>
+            <label>
+                <input type="checkbox" name="options" value="Spezialeffekte"> Spezialeffekte (z. B. Zeitraffer)
+            </label>
+            <label>
+                <input type="checkbox" name="options" value="Nachbearbeitung"> Nachbearbeitung
+            </label>
+            <label>
+                <input type="checkbox" name="options" value="Farbkorrektur"> Farbkorrektur
+            </label>
+            <label>
+                <input type="checkbox" name="options" value="Musik"> Musik/Audio für Videos
+            </label>
+        </div>
+
+        <!-- Zusammenfassung der Auswahl -->
+        <div id="summary">
+            <h2>Zusammenfassung</h2>
+            <p id="summary-text">Ihre Auswahl wird hier angezeigt.</p>
+        </div>
+
+        <button id="submit-button">Absenden</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+```
+
+2. *CSS* (Für das grundlegende Layout)
+
+```css
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+.step {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin: 8px 0;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+```
