@@ -1,0 +1,63 @@
+/* Grundlegende Seiteinstellungen */
+body {
+    font-family: 'Roboto', sans-serif; /* Coole Schriftart */
+    background-color: #f4f4f4; /* Helles Grau als Hintergrund */
+    color: #333333; /* Dunkleres Grau für die Schrift */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Etwas mehr Abstand zwischen den Zeilen für bessere Lesbarkeit */
+}
+
+/* Header-Styling */
+header {
+    background-color: #333333; /* Dunkles Grau für den Header */
+    color: white; /* Weißer Text im Header */
+    text-align: center;
+    padding: 20px;
+}
+
+/* Allgemeines Styling für h1 */
+h1 {
+    font-size: 2.5em; /* Größere Schriftgröße für den Header */
+    margin-bottom: 10px; /* Etwas Abstand nach unten */
+}
+
+/* Styling für Absätze (p) */
+p {
+    font-size: 1.2em; /* Etwas größere Schrift für Absätze */
+    margin: 20px auto; /* Abstand oben und unten für Absätze */
+    max-width: 800px; /* Maximale Breite, damit der Text nicht zu breit wird */
+    padding: 10px;
+[26.2., 12:22] ChatGPT: }
+
+/* Button-Style */
+button.meinButton {
+    background-color: #007BFF; /* Blau als Hintergrundfarbe für den Button */
+    color: white; /* Weiße Schrift im Button */
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px; /* Abgerundete Ecken */
+    font-size: 1.1em; /* Etwas größere Schrift im Button */
+    transition: background-color 0.3s ease; /* Sanfter Übergang beim Hover-Effekt */
+}
+
+/* Hover-Effekt für den Button */
+button.meinButton:hover {
+    background-color: #0056b3; /* Dunkleres Blau beim Hover */
+}
+
+/* Weitere Anpassungen für kleinere Bildschirmgrößen */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px; /* Kleinere Schriftgröße für mobile Geräte */
+    }
+
+    h1 {
+        font-size: 2em; /* Kleinere Header-Schrift auf kleinen Geräten */
+    }
+
+    button.meinButton {
+        padding: 8px 16px; /* Etwas kleinere Buttons auf kleinen Geräten */
+    }
+}
