@@ -1,6 +1,55 @@
 let totalPrice = 0;
 let selections = [];
 
+let totalPrice = 0;
+let selections = [];
+
+function startConfigurator() {
+    document.getElementById('startButton').style.display = 'none'; // Button ausblenden
+    document.getElementById('step-1').style.display = 'block'; // Step 1 anzeigen
+}
+
+function selectOption(element, type, value, price) {
+    // Markiere die ausgewählte Option
+    const selectedOption = element;
+    const allOptions = document.querySelectorAll(#step-${getStepNumber(type)} .option);
+
+    allOptions.forEach(option => option.classList.remove('selected'));
+    selectedOption.classList.add('selected');
+    
+    // Speichere die Auswahl und berechne den Preis
+    selections[type] = { value, price };
+    totalPrice += price;
+    updateSummary();
+    showNextStep(type);
+}
+
+function getStepNumber(type) {
+    switch (type) {
+        case 'vehicle':
+            return 1;
+        case 'media':
+            return 2;
+            case 'drone':
+            return 3;
+        case 'photoType':
+        case 'locationCount':
+            return 4;
+        case 'videoType':
+            return 4;
+        default:
+            return 0;
+    }
+}
+
+function showNextStep(type) {
+    let nextStep;
+    switch (type) {
+        case 'vehicle':
+            nextStep = document.getElementBy
+    }
+}
+            
 function selectOption(element, type, value, price) {
     // Markiere die ausgewählte Option
     const selectedOption = element;
