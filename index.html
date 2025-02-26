@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Konfigurator</title>
+    <title>Foto-/Videografen Konfigurator</title>
     <link rel="stylesheet" href="styles.css"> <!-- Verlinke die CSS-Datei -->
 </head>
 <body>
@@ -11,6 +11,7 @@
         <h1>Foto-/Videografen Konfigurator</h1>
 
         <div class="option-container">
+            <h2>Fahrzeugwahl</h2>
             <div class="option" onclick="selectOption(this)">
                 <input type="radio" name="vehicle" value="Auto" id="auto">
                 <label for="auto">Auto</label>
@@ -22,11 +23,12 @@
         </div>
 
         <div class="option-container">
+            <h2>Medienwahl</h2>
             <div class="option" onclick="selectOption(this)">
                 <input type="radio" name="media" value="Foto" id="foto">
                 <label for="foto">Foto</label>
             </div>
-                <div class="option" onclick="selectOption(this)">
+            <div class="option" onclick="selectOption(this)">
                 <input type="radio" name="media" value="Video" id="video">
                 <label for="video">Video</label>
             </div>
@@ -37,6 +39,7 @@
         </div>
 
         <div class="option-container">
+            <h2>Drohnenaufnahmen</h2>
             <div class="option" onclick="selectOption(this)">
                 <input type="radio" name="drone" value="Ja" id="drone-ja">
                 <label for="drone-ja">Drohnenaufnahmen</label>
@@ -48,6 +51,7 @@
         </div>
 
         <div class="option-container">
+            <h2>Locations</h2>
             <div class="option" onclick="selectOption(this)">
                 <input type="radio" name="location" value="Ein Location" id="one-location">
                 <label for="one-location">1 Location</label>
