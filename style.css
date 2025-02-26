@@ -37,7 +37,8 @@ h2 {
     font-size: 1.2rem;
     color: #333;
     margin-bottom: 10px;
-}
+} 
+
 /* Allgemeine Formatierungen für den Container von Optionen */
 .option-container {
     display: flex;
@@ -54,10 +55,13 @@ h2 {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
     transition: all 0.3s ease; /* Sanfter Übergang bei Hover */
     cursor: pointer; /* Mauszeiger ändert sich zu einem Hand-Symbol */
+    touch-action: manipulation; /* Verhindert das Standard-Verhalten des Touch-Events */
 } 
 
 /* Hover-Effekt für Optionen */
-.option:hover {
+.option:hover,
+.option:active,
+.option:focus {
     background-color: #007BFF; /* Blaue Hintergrundfarbe beim Hover */
     color: white; /* Weißer Text beim Hover */
     transform: translateY(-3px); /* Kleine Animation beim Hover */
