@@ -3,116 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shooting Konfigurator</title>
-    <!-- Google Fonts - Roboto -->
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Konfigurator</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Verlinke die CSS-Datei -->
 </head>
 <body>
-    <div class="option-container">
-    <div class="option" onclick="selectOption(this)">
-<input type="radio" name="vehicle" value="Auto"> Auto
-    </div>
-    <div class="option" onclick="selectOption(this)">
-        <input type="radio" name="vehicle" value="Motorrad"> Motorrad
-    </div>
-    <div class="option" onclick="selectOption(this)">
-        <input type="radio" name="media" value="Foto"> Foto
-    </div>
-    <div class="option" onclick="selectOption(this)">
-        <input type="radio" name="media" value="Video"> Video
-    </div>
-    <div class="option" onclick="selectOption(this)">
-        <input type="radio" name="media" value="Beides"> Foto und Video
-    </div>
     <div class="container">
-        <h1>Shooting Konfigurator</h1>
+        <h1>Foto-/Videografen Konfigurator</h1>
 
-        <!-- Schritt 1: Fahrzeugwahl -->
-        <div class="step" id="vehicle-step">
-            <h2>Schritt 1: Fahrzeugwahl</h2>
-            <label>
-                <input type="radio" name="vehicle" value="Auto"> Auto
-            </label>
-            <label>
-                <input type="radio" name="vehicle" value="Motorrad"> Motorrad
-            </label>
+        <div class="option-container">
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="vehicle" value="Auto" id="auto">
+                <label for="auto">Auto</label>
+            </div>
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="vehicle" value="Motorrad" id="motorrad">
+                <label for="motorrad">Motorrad</label>
+            </div>
         </div>
 
-        <!-- Schritt 2: Fotos/Videos -->
-        <div class="step" id="type-step">
-            <h2>Schritt 2: Fotos/Videos</h2
-<label>
-                <input type="checkbox" name="type" value="Fotos"> Fotos
-            </label>
-            <label>
-                <input type="checkbox" name="type" value="Videos"> Videos
-            </label>
-            <label>
-                <input type="checkbox" name="type" value="Beides"> Beides (Fotos + Videos)
-            </label>
+        <div class="option-container">
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="media" value="Foto" id="foto">
+                <label for="foto">Foto</label>
+            </div>
+                <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="media" value="Video" id="video">
+                <label for="video">Video</label>
+            </div>
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="media" value="Beides" id="beides">
+                <label for="beides">Foto und Video</label>
+            </div>
         </div>
 
-        <!-- Schritt 3: Art der Aufnahmen -->
-        <div class="step" id="shooting-step">
-            <h2>Schritt 3: Art der Aufnahmen</h2>
-            <label>
-                <input type="checkbox" name="shooting" value="Drohnenaufnahmen"> Drohnenaufnahmen
-            </label>
-            <label>
-                <input type="checkbox" name="shooting" value="Fahraufnahmen mit Ton"> Fahraufnahmen mit Ton
-            </label>
-            <label>
-                <input type="checkbox" name="shooting" value="Fahraufnahmen ohne Ton"> Fahraufnahmen ohne Ton
-            </label>
-            <label>
-                <input type="checkbox" name="shooting" value="Standaufnahmen"> Standaufnahmen
-            </label>
+        <div class="option-container">
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="drone" value="Ja" id="drone-ja">
+                <label for="drone-ja">Drohnenaufnahmen</label>
+            </div>
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="drone" value="Nein" id="drone-nein">
+                <label for="drone-nein">Keine Drohnenaufnahmen</label>
+            </div>
         </div>
 
-        <!-- Schritt 4: Anzahl der Locations -->
-        <div class="step" id="locations-step">
-            <h2>Schritt 4: Anzahl der Locations</h2>
-            <label>
-            <input type="radio" name="locations" value="1"> 1 Location
-            </label>
-            <label>
-                <input type="radio" name="locations" value="2"> 2 Locations
-            </label>
-            <label>
-                <input type="radio" name="locations" value="3"> 3 Locations
-            </label>
-            <label>
-                <input type="radio" name="locations" value="Mehr"> Mehr als 3 Locations
-            </label>
+        <div class="option-container">
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="location" value="Ein Location" id="one-location">
+                <label for="one-location">1 Location</label>
+            </div>
+            <div class="option" onclick="selectOption(this)">
+                <input type="radio" name="location" value="Mehr Locations" id="multiple-location">
+                <label for="multiple-location">Mehr Locations</label>
+            </div>
         </div>
-
-        <!-- Schritt 5: Zusätzliche Optionen -->
-        <div class="step" id="options-step">
-            <h2>Schritt 5: Zusätzliche Optionen</h2>
-            <label>
-                <input type="checkbox" name="options" value="Spezialeffekte"> Spezialeffekte (z. B. Zeitraffer)
-            </label>
-            <label>
-                <input type="checkbox" name="options" value="Nachbearbeitung"> Nachbearbeitung
-            </label>
-            <label>
-                <input type="checkbox" name="options" value="Farbkorrektur"> Farbkorrektur
-            </label>
-            <label>
-                <input type="checkbox" name="options" value="Musik"> Musik/Audio für Videos
-            </label>
-        </div>
-
-        <!-- Zusammenfassung der Auswahl -->
-        <div id="summary">
-            <h2>Zusammenfassung</h2>
-            <p id="summary-text">Ihre Auswahl wird hier angezeigt.</p>
-        </div>
-
-        <button id="submit-button">Absenden</button>
     </div>
 
-    <script src="script.js"></script>
+    <script src="script.js"></script> <!-- Verlinke die JavaScript-Datei -->
 </body>
 </html>
