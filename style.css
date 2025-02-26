@@ -49,7 +49,7 @@ h2 {
 
 /* Hintergrundfarbe für Optionen */
 .option {
-    background-color: #f0f0f0; /* Helles Grau als Hintergrund */
+    background-color: #f0f0f4; /* Helles Grau als Hintergrund */
     padding: 15px;
     border-radius: 10px; /* Abgerundete Ecken für den Button */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
