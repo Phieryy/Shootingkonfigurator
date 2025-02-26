@@ -10,7 +10,7 @@ function startConfigurator() {
 function selectOption(element, type, value, price) {
     // Markiere die ausgewählte Option und hebe alle anderen hervor
     const selectedOption = element;
-    const allOptions = document.querySelectorAll(#step-${getStepNumber(type)} .option);
+    const allOptions = document.querySelectorAll(#step-getStepNumber(type) .option);
 
     allOptions.forEach(option => option.classList.remove('selected'));
     selectedOption.classList.add('selected');
