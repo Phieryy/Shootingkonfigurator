@@ -3,66 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foto-/Videografen Konfigurator</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Verlinke die CSS-Datei -->
+    <title>Shooting Konfigurator</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
         <h1>Shooting Konfigurator</h1>
+        <h2>Gestalte dein eigenes Traumshooting</h2>
 
-        <div class="option-container">
-            <h2>Fahrzeugwahl</h2>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="vehicle" value="Auto" id="auto">
+        <!-- Step 1: Fahrzeugwahl -->
+        <div id="step-1" class="step">
+            <h3>Step 1: Wähle dein Fahrzeug</h3>
+            <div class="option" onclick="selectOption(this, 'vehicle', 'Auto', 100)">
+                <input type="radio" name="vehicle" id="auto">
                 <label for="auto">Auto</label>
             </div>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="vehicle" value="Motorrad" id="motorrad">
+            <div class="option" onclick="selectOption(this, 'vehicle', 'Motorrad', 120)">
+                <input type="radio" name="vehicle" id="motorrad">
                 <label for="motorrad">Motorrad</label>
             </div>
         </div>
 
-        <div class="option-container">
-            <h2>Medienwahl</h2>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="media" value="Foto" id="foto">
+        <!-- Step 2: Medienwahl -->
+        <div id="step-2" class="step">
+            <h3>Step 2: Wähle die Medien</h3>
+            <div class="option" onclick="selectOption(this, 'media', 'Foto', 50)">
+                <input type="radio" name="media" id="foto">
                 <label for="foto">Foto</label>
             </div>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="media" value="Video" id="video">
+            <div class="option" onclick="selectOption(this, 'media', 'Video', 100)">
+                <input type="radio" name="media" id="video">
                 <label for="video">Video</label>
             </div>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="media" value="Beides" id="beides">
-                <label for="beides">Foto und Video</label>
+            <div class="option" onclick="selectOption(this, 'media', 'Beides', 150)">
+                <input type="radio" name="media" id="beides">
+                <label for="beides">Foto & Video</label>
             </div>
         </div>
 
-        <div class="option-container">
-            <h2>Aufnahmeart</h2>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="drone" value="Ja" id="drone-ja">
-                <label for="drone-ja">Drohnenaufnahmen</label>
+        <!-- Step 3: Drohnenaufnahmen -->
+        <div id="step-3" class="step">
+            <h3>Step 3: Möchtest du Drohnenaufnahmen?</h3>
+            <div class="option" onclick="selectOption(this, 'drone', 'Ja', 75)">
+                <input type="radio" name="drone" id="drone-ja">
+                <label for="drone-ja">Ja</label>
             </div>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="drone" value="Nein" id="drone-nein">
-                <label for="drone-nein">Keine Drohnenaufnahmen</label>
+            <div class="option" onclick="selectOption(this, 'drone', 'Nein', 0)">
+                <input type="radio" name="drone" id="drone-nein">
+                <label for="drone-nein">Nein</label>
             </div>
         </div>
 
-        <div class="option-container">
-            <h2>Locations</h2>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="location" value="Ein Location" id="one-location">
-                <label for="one-location">1 Location</label>
+        <!-- Step 4: Weitere Optionen -->
+        <div id="step-4" class="step">
+            <h3>Step 4: Weitere Optionen</h3>
+            <div id="foto-options" style="display:none;">
+                <h4>Fotooptionen</h4>
+                <div class="option" onclick="selectOption(this, 'photoType', 'Rollingshots', 50)">
+                    <input type="radio" name="photoType" id="rollingshots">
+                    <label for="rollingshots">Rollingshots</label>
+                </div>
+                <div class="option" onclick="selectOption(this, 'photoType', 'Standbilder', 40)">
+                    <input type="radio" name="photoType" id="standbilder">
+                    <label for="standbilder">Standbilder</label>
+                </div>
+                <div class="option" onclick="selectOption(this, 'locationCount', '1 Location', 0)">
+                    <input type="radio" name="locationCount" id="1-location">
+                    <label for="1-location">1 Location</label>
+                </div>
+                <div class="option" onclick="selectOption(this, 'locationCount', '2 Locations', 50)">
+                    <input type="radio" name="locationCount" id="2-location">
+                    <label for="2-location">2 Locations</label>
+                </div>
+                <div class="option" onclick="selectOption(this, 'locationCount', 'Mehr Locations', 100)">
+                    <input type="radio" name="locationCount" id="multiple-location">
+                    <label for="multiple-location">Mehr Locations</label>
+                </div>
             </div>
-            <div class="option" onclick="selectOption(this)">
-                <input type="radio" name="location" value="Mehr Locations" id="multiple-location">
-                <label for="multiple-location">Mehr Locations</label>
+
+            <div id="video-options" style="display:none;">
+                <h4>Videooptionen</h4>
+                <div class="option" onclick="selectOption(this, 'videoType', 'Standaufnahmen', 80)">
+                    <input type="radio" name="videoType" id="standaufnahmen">
+                    <label for="standaufnahmen">Standaufnahmen</label>
+                </div>
+                <div class="option" onclick="selectOption(this, 'videoType', 'Fahrvideos', 120)">
+                    <input type="radio" name="videoType" id="fahrvideos">
+                    <label for="fahrvideos">Fahrvideos</label>
+                </div>
+                <div class="option" onclick="selectOption(this, 'videoType', 'Fahrvideos mit Ton', 150)">
+                    <input type="radio" name="videoType" id="fahrvideos-mit-ton">
+                    <label for="fahrvideos-mit-ton">Fahrvideos mit Ton</label>
+                </div>
             </div>
+        </div>
+
+        <!-- Zusammenfassung -->
+        <div id="summary" class="step" style="display:none;">
+            <h3>Deine Auswahl</h3>
+            <ul id="summary-list"></ul>
+            <h4 id="total-price">Gesamtpreis: €0</h4>
+            <button onclick="confirmOrder()">Bestätigen</button>
         </div>
     </div>
 
-    <script src="script.js"></script> <!-- Verlinke die JavaScript-Datei -->
+    <script src="script.js"></script>
 </body>
 </html>
