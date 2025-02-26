@@ -3,7 +3,7 @@ body {
     font-family: 'Roboto', sans-serif; /* Coole Schriftart */
     background-color: #f4f4f4; /* Helles Grau als Hintergrund */
     color: #333333; /* Dunkleres Grau für die Schrift */
-    margin: 0;
+    margin: 0 20px 0 20px;
     padding: 0 20px 0 20px;
     line-height: 1.6; /* Etwas mehr Abstand zwischen den Zeilen für bessere Lesbarkeit */
 }
