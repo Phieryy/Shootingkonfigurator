@@ -10,7 +10,7 @@ function startConfigurator() {
 function selectOption(element, type, value, price) {
     // Markiere die ausgewählte Option und hebe alle anderen hervor
     const selectedOption = element;
-    const allOptions = document.querySelectorAll(#step-getStepNumber(type) .option);
+    const allOptions = document.querySelectorAll(#step-${getStepNumber(type)} .option);
 
     allOptions.forEach(option => option.classList.remove('selected'));
     selectedOption.classList.add('selected');
@@ -29,19 +29,19 @@ function getStepNumber(type) {
         case 'vehicle':
             return 1;
         case 'media':
-            return 2;
+            return 2;
         case 'drone':
             return 3;
         case 'photoType':
         case 'locationCount':
-            return 4;
+            return 4;
         case 'videoType':
             return 4;
         default:
             return 0;
-}
+    
 
-function showNextStep(type) {
+function showNextStep(type) 
     let nextStep;
     switch (type) 
         case 'vehicle':
@@ -62,7 +62,8 @@ function showNextStep(type) {
             nextStep = document.getElementById('summary');
             break;
         default:
-            return;  
+            return;
+    
 
     // Verstecke den aktuellen Schritt und zeige den nächsten
     document.querySelector(#step-{getStepNumber(type)}).style.display = 'none';
@@ -72,9 +73,9 @@ function showNextStep(type) {
 function showFotoVideoOptions() {
     const mediaType = selections['media']?.value;
     if (mediaType === 'Foto') {
-        document.getElementById('foto-options').style.display = 'block';
+        document.getElementById('foto-options').style.display = 'block';
         document.getElementById('video-options').style.display = 'none';
-    } else if (mediaType === 'Video') {
+    } else if (mediaType === 'Video') {
         document.getElementById('foto-options').style.display = 'none';
         document.getElementById('video-options').style.display = 'block';
     } else {
