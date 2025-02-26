@@ -32,6 +32,12 @@ h1 {
     margin-bottom: 30px;
 } 
 
+/* Stil für die Überschriften der Abschnitte */
+h2 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
 /* Allgemeine Formatierungen für den Container von Optionen */
 .option-container {
     display: flex;
