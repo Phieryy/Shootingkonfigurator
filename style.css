@@ -1,40 +1,43 @@
-/* Grundlegende Seiteinstellungen */
+/* Allgemeine Formatierungen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} 
+
+/* Hintergrundfarbe der Seite und Schriftfarbe */
 body {
-    font-family: 'Roboto', sans-serif; /* Coole Schriftart */
-    background-color: #f4f4f4; /* Helles Grau als Hintergrund */
-    color: #333333; /* Dunkleres Grau für die Schrift */
-    margin: 0 10px 0 10px;
-    padding: 0 10px 0 10px;
-    line-height: 1.6; /* Etwas mehr Abstand zwischen den Zeilen für bessere Lesbarkeit */
-}
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} 
 
-/* Header-Styling */
-header {
-    background-color: #333333; /* Dunkles Grau für den Header */
-    color: white; /* Weißer Text im Header */
-    text-align: center;
-    padding: 20px;
-}
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+} 
 
-/* Allgemeines Styling für h1 */
 h1 {
-    font-size: 2.5em; /* Größere Schriftgröße für den Header */
-    margin-bottom: 10px; /* Etwas Abstand nach unten */
-}
+    text-align: center;
+    margin-bottom: 30px;
+} 
 
-/* Styling für Absätze (p) */
-p {
-    font-size: 1.2em; /* Etwas größere Schrift für Absätze */
-    margin: 20px auto; /* Abstand oben und unten für Absätze */
-    max-width: 800px; /* Maximale Breite, damit der Text nicht zu breit wird */
-    padding: 10px;
-}
 /* Allgemeine Formatierungen für den Container von Optionen */
 .option-container {
     display: flex;
     flex-direction: column;
-    gap: 20px; /* Abstand zwischen den Optionen */
-    margin: 30px; /* Abstand zu den Rändern */
+    gap: 15px;
+    margin-bottom: 20px;
 } 
 
 /* Hintergrundfarbe für Optionen */
@@ -52,7 +55,7 @@ p {
     background-color: #007BFF; /* Blaue Hintergrundfarbe beim Hover */
     color: white; /* Weißer Text beim Hover */
     transform: translateY(-3px); /* Kleine Animation beim Hover */
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
 } 
 
 /* Markierung für die aktuell ausgewählte Option */
@@ -60,35 +63,12 @@ p {
     background-color: #007BFF; /* Blaue Farbe für die ausgewählte Option */
     color: white; /* Weißer Text für die ausgewählte Option */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
-}
-/* Button-Style */
-button.meinButton {
-    background-color: #007BFF; /* Blau als Hintergrundfarbe für den Button */
-    color: white; /* Weiße Schrift im Button */
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px; /* Abgerundete Ecken */
-    font-size: 1.1em; /* Etwas größere Schrift im Button */
-    transition: background-color 0.3s ease; /* Sanfter Übergang beim Hover-Effekt */
-}
+} 
 
-/* Hover-Effekt für den Button */
-button.meinButton:hover {
-    background-color: #0056b3; /* Dunkleres Blau beim Hover */
-}
+input[type="radio"] {
+    display: none; /* Radio Buttons verstecken */
+} 
 
-/* Weitere Anpassungen für kleinere Bildschirmgrößen */
-@media (max-width: 768px) {
-    body {
-        font-size: 16px; /* Kleinere Schriftgröße für mobile Geräte */
-    }
-
-    h1 {
-        font-size: 2em; /* Kleinere Header-Schrift auf kleinen Geräten */
-    }
-
-    button.meinButton {
-        padding: 8px 16px; /* Etwas kleinere Buttons auf kleinen Geräten */
-    }
+label {
+    cursor: pointer;
 }
