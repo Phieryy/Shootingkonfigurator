@@ -23,7 +23,7 @@ function getStepNumber(type) {
         case 'media':
             return 2;
         case 'drone':
-            return 3;
+            return 3;
         case 'photoType':
         case 'locationCount':
             return 4;
@@ -43,12 +43,12 @@ function showNextStep(type) {
         case 'media':
             nextStep = document.getElementById('step-3');
             if (selections['media'] === 'Foto') {
-                document.getElementById('foto-options').style.display = 'block';
+                document.getElementById('foto-options').style.display = 'block';
                 document.getElementById('video-options').style.display = 'none';
-            } else {
+             else 
                 document.getElementById('foto-options').style.display = 'none';
                 document.getElementById('video-options').style.display = 'block';
-            }
+            
             break;
         case 'drone':
             nextStep = document.getElementById('step-4');
@@ -60,10 +60,11 @@ function showNextStep(type) {
         case 'videoType':
             nextStep = document.getElementById('summary');
             break;
-    }
+    
 
-    if (nextStep) {
-      nextStep.style.display = 'block';
+    if (nextStep) 
+        document.querySelectorAll('.step').forEach(step => step.style.display = 'none');
+        nextStep.style.display = 'block';
     
 
 function updateSummary() 
@@ -74,10 +75,9 @@ function updateSummary()
             const listItem = document.createElement('li');
             listItem.textContent = {key.charAt(0).toUpperCase() + key.slice(1)}: selections[key].value - €{selections[key].price};
             summaryList.appendChild(listItem);
-        }
-    });
-
-    document.getElementById('total-price').textContent = Gesamtpreis: €${totalPrice};
+        }
+    });
+document.getElementById('total-price').textContent = Gesamtpreis: €${totalPrice};
 }
 
 function confirmOrder() {
