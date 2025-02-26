@@ -7,12 +7,12 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #f0f0f0; /* Helles Grau für den Hintergrund */
+    color: #333333; /* Dunkles Grau für den Text */
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center;
     align-items: center;
     min-height: 100vh;
 }
@@ -49,13 +49,13 @@ h2 {
     background-color: #f0f0f0;
     padding: 15px;
     border-radius: 8px;
-    margin: 10px 0;
-  cursor: pointer;
+    margin: 10px 0;
+    cursor: pointer;
     transition: 0.3s ease;
 }
 
 .option:hover, .option.selected {
-    background-color: #007bff;
+    background-color: #007bff; /* Blau bei Hover und Auswahl */
     color: white;
     transform: scale(1.05);
 }
