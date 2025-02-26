@@ -32,8 +32,9 @@ function getStepNumber(type) {
             return 2;
         case 'drone':
             return 3;
-        case 'photoType':
-            return 4;
+        case 'photoType':
+        case 'locationCount':
+            return 4;
         case 'videoType':
             return 4;
         default:
