@@ -28,8 +28,39 @@ p {
     margin: 20px auto; /* Abstand oben und unten für Absätze */
     max-width: 800px; /* Maximale Breite, damit der Text nicht zu breit wird */
     padding: 10px;
-[26.2., 12:22] ChatGPT: }
+}
+/* Allgemeine Formatierungen für den Container von Optionen */
+.option-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Abstand zwischen den Optionen */
+    margin: 30px; /* Abstand zu den Rändern */
+} 
 
+/* Hintergrundfarbe für Optionen */
+.option {
+    background-color: #f0f0f0; /* Helles Grau als Hintergrund */
+    padding: 15px;
+    border-radius: 10px; /* Abgerundete Ecken für den Button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Leichter Schatten für Tiefe */
+    transition: all 0.3s ease; /* Sanfter Übergang bei Hover */
+    cursor: pointer; /* Mauszeiger ändert sich zu einem Hand-Symbol */
+} 
+
+/* Hover-Effekt für Optionen */
+.option:hover {
+    background-color: #007BFF; /* Blaue Hintergrundfarbe beim Hover */
+    color: white; /* Weißer Text beim Hover */
+    transform: translateY(-3px); /* Kleine Animation beim Hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
+} 
+
+/* Markierung für die aktuell ausgewählte Option */
+.option.selected {
+    background-color: #007BFF; /* Blaue Farbe für die ausgewählte Option */
+    color: white; /* Weißer Text für die ausgewählte Option */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Stärkerer Schatten */
+}
 /* Button-Style */
 button.meinButton {
     background-color: #007BFF; /* Blau als Hintergrundfarbe für den Button */
